@@ -51,7 +51,9 @@ services:
       "
 
   superset:
-    image: apache/superset
+    build:
+      context: .
+      dockerfile: Dockerfile.superset
     container_name: superset
     depends_on:
       - postgres
